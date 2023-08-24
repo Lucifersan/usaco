@@ -1,0 +1,53 @@
+Each cow i has the following properties:
+- Their type is breeds[i]
+- Their range is [i, e_arr[i]]
+
+A cow is a potential leader if:
+- Their range includes all cows of their own type
+- Their range includes any cow of the other type that is a potential leader
+
+Example #1:
+4
+GHHG
+2 4 3 4
+
+- Cow #1:
+  - Type is 'G'
+  - Range is [1, 2] ("GH..")
+  - Could be a leader because contains Cow #2, potential 'H' leader
+- Cow #2:
+  - Type is 'H'
+  - Range is [2, 4] (".HHG")
+  - Could be a leader because contains all 'H' cows
+- Cow #3:
+  - Type is 'H'
+  - Range is [3, 3] ("..H.")
+  - Cannot be leader
+- Cow #4:
+  - Type is 'G'
+  - Range is [4, 4] ("...G")
+  - Cannot be leader
+
+There is only 1 valid leader pair (leader of 'G' and leader of 'H' present),
+which is Cow #1 with Cow #2
+
+Example #2:
+3
+GGH
+2 3 3
+
+- Cow #1:
+  - Type is 'G'
+  - Range is [1, 2] ("GG.")
+  - Could be a leader because contains all 'G' cows
+- Cow #2:
+  - Type is 'G'
+  - Range is [2, 3] (".GH")
+  - Could be a leader because contains Cow #3, potential 'H' leader
+- Cow #3:
+  - Type is 'H'
+  - Range is [3, 3] ("..H")
+  - Could be a leader because contains all 'H' cows
+
+There are 2 valid leader pairs (leader of 'G' and leader of 'H' present),
+which are Cow #1 with Cow #3, and Cow #2 with Cow #3

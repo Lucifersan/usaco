@@ -1,0 +1,10 @@
+Step 1) have 2 strings 
+Step 2) make one string into the other string
+
+Easy, right?
+SIKE
+
+Step 3) remember that you can only do find+replace operations on the string
+Step 4) with great difficulty and pain, return the # of operations it takes
+
+
